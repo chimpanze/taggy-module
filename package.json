@@ -38,7 +38,7 @@
     "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"
   },
   "dependencies": {
-    "@chimpanze/taggy-sdk": "^0.1.0",
+    "@chimpanze/taggy-sdk": "^0.2.0",
     "@nuxt/kit": "^4.0.1",
     "defu": "^6.1.4"
   },
