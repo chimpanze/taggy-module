@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@chimpanze/taggy-sdk':
-        specifier: ^0.0.7
-        version: 0.0.7
+        specifier: ^0.1.0
+        version: 0.1.0
       '@nuxt/kit':
         specifier: ^4.0.1
         version: 4.0.2(magicast@0.3.5)
@@ -204,8 +204,8 @@ packages:
     resolution: {integrity: sha512-ruv7Ae4J5dUYULmeXw1gmb7rYRz57OWCPM57pHojnLq/3Z1CK2lNSLTCVjxVk1F/TZHwOZZrOWi0ur95BbLxNQ==}
     engines: {node: '>=6.9.0'}
 
-  '@chimpanze/taggy-sdk@0.0.7':
-    resolution: {integrity: sha512-xnncupnJMqhSd+P5jKTPjeCRNy7+nnwycP4XkWMeWaFKJlBilNfSo1LOURWQUjXt1TGcGpE5pXyz90W6N2giUQ==, tarball: https://npm.pkg.github.com/download/@chimpanze/taggy-sdk/0.0.7/8f276ad8d0a16ed99ed58810c3388e1d95fc1c8c}
+  '@chimpanze/taggy-sdk@0.1.0':
+    resolution: {integrity: sha512-KL5ef4bF5s24lU78m0f8mQrmV2XKTMkJDw8t0Wj7pErE54NTbURcE53tqJaxWr3++ezjsdQvpjvNo7mK7hVvdA==, tarball: https://npm.pkg.github.com/download/@chimpanze/taggy-sdk/0.1.0/07c50493025ba54f581841f79c4ff458b3eddeba}
 
   '@clack/core@0.5.0':
     resolution: {integrity: sha512-p3y0FIOwaYRUPRcMO7+dlmLh8PSRcrjuTndsiA0WAFbWES0mLZlrjVoBRZ9DzkPFJZG6KGkJmoEAY0ZcVWTkow==}
@@ -5804,7 +5804,7 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
-  '@chimpanze/taggy-sdk@0.0.7':
+  '@chimpanze/taggy-sdk@0.1.0':
     dependencies:
       openapi-typescript-fetch: 2.2.1
       zod: 4.0.14

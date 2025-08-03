@@ -35,9 +35,7 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt.options.runtimeConfig.public.taggy,
       {
         baseUrl: options.baseUrl,
-        apiKey: options.apiKey,
         debug: options.debug,
-        auth: options.auth,
       },
     )
   },

@@ -1,14 +1,10 @@
 import type { TaggyClient } from '@chimpanze/taggy-sdk'
-import { useState, useNuxtApp } from '#app'
+import { useNuxtApp } from '#app'
 
 export function useTaggy() {
   // Get the Taggy client instance from the plugin using provide/inject pattern
   const { $taggy } = useNuxtApp()
   const taggyClient = $taggy as TaggyClient
-
-  // Authentication state
-  const isAuthenticated = useState<boolean>('taggy:authenticated', () => false)
-  const user = useState<Record<string, unknown> | null>('taggy:user', () => null)
 
   // Provide access to all Taggy services
   const auth = taggyClient.auth
@@ -26,29 +22,9 @@ export function useTaggy() {
   const comments = taggyClient.comments
   const system = taggyClient.system
 
-  // Helper functions for common operations
-  // Get current user
-  const getCurrentUser = async () => {
-    try {
-      const response = await auth.getCurrentUser()
-      isAuthenticated.value = true
-      user.value = response
-      return response
-    }
-    catch (error) {
-      isAuthenticated.value = false
-      user.value = null
-      throw error
-    }
-  }
-
   return {
     // Client instance
     client: taggyClient,
-
-    // Authentication state
-    isAuthenticated,
-    user,
 
     // Services
     auth,
@@ -65,8 +41,5 @@ export function useTaggy() {
     ai,
     comments,
     system,
-
-    // Helper functions
-    getCurrentUser,
   }
 }

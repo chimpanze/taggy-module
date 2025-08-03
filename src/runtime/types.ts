@@ -12,11 +12,7 @@ declare module '@nuxt/schema' {
   interface PublicRuntimeConfig {
     taggy: {
       baseUrl: string
-      apiKey?: string
       debug?: boolean
-      auth?: {
-        getToken?: () => Promise<string>
-      }
     }
   }
 }
