@@ -41,4 +41,4 @@ jobs:
         run: pnpm run test
 
       - name: Build
-        run: pnpm run prepack
+        run: pnpm run dev:prepare && pnpm run prepack
