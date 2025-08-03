@@ -42,42 +42,17 @@ export default defineNuxtConfig({
   
   taggy: {
     baseUrl: 'https://api.taggy.com/api/v1', // Required
-    apiKey: 'your-api-key',                  // Optional
     debug: true,                             // Optional
-    
-    // Optional: Custom authentication configuration
-    auth: {
-      // Custom function to get the authentication token
-      getToken: async () => {
-        // Your custom implementation here
-        return Promise.resolve('your-auth-token')
-      },
-    },
   }
 })
 ```
 
 ### Authentication Configuration
 
-By default, the module uses `localStorage.getItem('hanko_token')` to retrieve the authentication token. If you need to customize this behavior, you can provide your own `getToken` function in the module configuration:
-
 ```typescript
-taggy: {
-  // ... other options
-  auth: {
-    getToken: async () => {
-      // Example: Get token from a custom storage solution
-      return Promise.resolve(myCustomStorage.getAuthToken())
-      
-      // Example: Get token from a different localStorage key
-      // return Promise.resolve(localStorage.getItem('my_custom_token_key'))
-      
-      // Example: Get token from an authentication service
-      // const token = await authService.getToken()
-      // return token
-    },
-  },
-}
+const taggy = useTaggy();
+taggy.setToken('my-token')
+taggy.getToken() => 'my-token'
 ```
 
 This allows you to integrate with any authentication system or token storage mechanism your application uses.
