@@ -9,7 +9,7 @@ on:
       - main
 
 permissions:
-  packages: write
+  packages: read
 
 jobs:
   lint:
