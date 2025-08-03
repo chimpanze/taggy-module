@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/chimpanze/taggy-module/compare/v1.1.0...v1.2.0) (2025-08-03)
+
+
+### Features
+
+* update `@chimpanze/taggy-sdk` to v0.2.0 in dependencies and lockfile ([8650929](https://github.com/chimpanze/taggy-module/commit/86509292ec0c9317cf396315360494b879ba2dd1))
+
 # [1.1.0](https://github.com/chimpanze/taggy-module/compare/v1.0.0...v1.1.0) (2025-08-03)
 
 
