@@ -21,7 +21,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@chimpanze'
 
-      - run: npm i -g --force corepack@latest && corepack enable && corepack prepare pnpm@latest --activate
+      - run: npm i -g --force corepack@0.34.0 && corepack enable && corepack prepare pnpm@10.14.0 --activate
 
       - name: Install dependencies
         env:
