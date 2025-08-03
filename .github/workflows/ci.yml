@@ -21,13 +21,18 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@chimpanze'
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 10.14.0
+
       - name: Install dependencies
         env:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: pnpm install
 
       - name: Lint
-        run: npm run lint
+        run: pnpm run lint
 
   test:
     runs-on: ubuntu-latest
@@ -41,13 +46,18 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@chimpanze'
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 10.14.0
+
       - name: Install dependencies
         env:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: pnpm install
 
       - name: Playground prepare
-        run: npm run dev:prepare
+        run: pnpm run dev:prepare
 
       - name: Test
-        run: npm run test
+        run: pnpm run test
