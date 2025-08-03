@@ -21,11 +21,9 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@chimpanze'
 
-      - run: npm i -g --force corepack@0.34.0 && corepack enable && corepack prepare pnpm@10.14.0 --activate
-
       - name: Install dependencies
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: pnpm install
 
       - name: Lint
@@ -43,12 +41,10 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@chimpanze'
 
-      - run: npm i -g --force corepack@latest && corepack enable
-
       - name: Install dependencies
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx nypm@latest i
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: pnpm install
 
       - name: Playground prepare
         run: npm run dev:prepare
